@@ -1,0 +1,669 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; 
+    color: #444444; 
+    background-color: #fffaf0; 
+}
+
+a {
+    color: #b8860b; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #e6b800; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff; 
+    border-bottom: 2px solid #f0e68c; 
+    box-shadow: 0 1px 3px rgba(184, 134, 11, 0.2); 
+    backdrop-filter: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif; 
+    font-size: 32px; 
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #b8860b; 
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); 
+}
+
+.nav-pc li a {
+    font-family: 'Playfair Display', serif; 
+    font-weight: 400; 
+    color: #666; 
+}
+
+.nav-pc li a:hover {
+    color: #e6b800; 
+}
+
+.slideshow-container {
+    height: 70vh; 
+    background-color: #fce4ec; 
+}
+
+.slide img {
+    opacity: 0.9; 
+    filter: sepia(0.05) brightness(1.05);
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 50px; 
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(184, 134, 11, 0.6); 
+    letter-spacing: 5px;
+}
+
+.news-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #ffffff; 
+    border-top: 1px dashed #f0e68c; 
+}
+
+.news-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #b8860b;
+    font-style: italic; 
+}
+
+.news-list {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    border-top: 1px solid #f0f0f0; 
+}
+
+.news-item {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0; 
+    text-align: left;
+}
+
+.news-item:hover {
+    background-color: #fff5ee; 
+}
+
+.news-date {
+    flex-shrink: 0;
+    width: 120px;
+    margin-right: 20px;
+    color: #b8860b;
+    font-weight: 700;
+}
+
+.news-title a {
+    color: #444;
+    font-weight: 400;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 35px; 
+    border: 1px solid #b8860b; 
+    background-color: #ffffff; 
+    color: #b8860b;
+    font-weight: 700;
+    border-radius: 30px; 
+    box-shadow: 1px 1px 3px rgba(184, 134, 11, 0.3); 
+    transition: all 0.3s;
+}
+
+.view-all:hover {
+    background-color: #fffaf0; 
+    box-shadow: 2px 2px 5px rgba(184, 134, 11, 0.5); 
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f5f6; 
+    font-size: 12px;
+    color: #999;
+    font-weight: 400;
+}
+
+
+/*商品紹介*/
+/* -------------------- */
+/* 商品紹介ページレイアウト */
+/* -------------------- */
+.hero-product {
+    text-align: center;
+    padding: 80px 40px 40px;
+    background-color: #fce4ec; 
+    margin-bottom: 30px;
+}
+
+.section-title-product {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #b8860b; 
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* -------------------- */
+/* 製品詳細エリア */
+/* -------------------- */
+.product-detail-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+    align-items: flex-start; 
+    gap: 50px;
+}
+
+.product-intro {
+    flex: 1;
+    padding-top: 30px; 
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 700; 
+    color: #333; 
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    letter-spacing: 0.5px;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* 購入ボタンのスタイル */
+.buy-button {
+    display: inline-block; 
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff; 
+    background-color: #c791a8;
+    border: 1px solid #c791a8;
+    border-radius: 20px; 
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #d8a8b8; 
+    opacity: 0.9;
+}
+
+/* -------------------- */
+/* 商品画像とテクスチャ */
+/* -------------------- */
+.product-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.product-main-img {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+.texture-info {
+    margin-top: 20px;
+    background-color: #fffaf0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f0e68c;
+}
+
+.texture-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%; 
+    border: 3px solid #b8860b;
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    max-width: 800px;
+    margin: 60px auto;
+    border: 0;
+    border-top: 2px dashed #f0e68c;
+}
+
+/* -------------------- */
+/* カラーバリエーション */
+/* -------------------- */
+.color-variation-section {
+    padding: 40px 40px 80px;
+    text-align: center;
+    background-color: #ffffff; 
+}
+
+.variation-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #b8860b;
+    margin-bottom: 40px;
+}
+
+.color-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.color-item {
+    width: 200px;
+    text-align: center;
+}
+
+.color-swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 2px solid #b8860b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.color-item:hover .color-swatch {
+    transform: scale(1.08);
+}
+
+/* スウォッチの色定義 (ブランドのクリスタル/ジェムトーンを意識) */
+.rose-quartz { background-color: #f7cac9; } /* 非常に淡いピンク */
+.amethyst { background-color: #9966cc; } /* 透明感のあるモーヴ */
+.golden-topaz { background-color: #ffc40c; } /* 輝くゴールドオレンジ */
+.clear-crystal { 
+    background-color: #ffffff; 
+    /* クリスタルのような透明感を出すためのグラデーション */
+    background-image: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.color-code {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #b8860b;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.color-name-jp {
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin: 5px 0;
+}
+
+.color-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* .gallery-description {
+    font-size: 16px;       
+    color: #666;           
+    margin-bottom: 20px;   
+    font-weight: 300;    
+} */
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .product-detail-section {
+        flex-direction: column;
+        margin: 40px auto;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .product-main-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-title-product {
+        font-size: 36px;
+    }
+
+    .color-grid {
+        gap: 20px;
+    }
+
+    .color-item {
+        width: 45%; /* スマホで2列表示 */
+    }
+}
+
+
+/* 共通のPlayfair DisplayとNoto Sans JPはstyle.cssから継承 */
+
+/* -------------------- */
+/* 商品紹介ページレイアウト */
+/* -------------------- */
+
+
+/* -------------------- */
+/* 商品画像とテクスチャ */
+/* -------------------- */
+.product-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.product-main-img {
+    width: 80%; /* サイズ調整 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+.texture-info {
+    margin-top: 20px;
+    background-color: #fffaf0; /* ベースカラー */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f0e68c; /* 薄いゴールドの線 */
+}
+
+.texture-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%; /* 円形でテクスチャを強調 */
+    border: 3px solid #b8860b;
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    max-width: 800px;
+    margin: 60px auto;
+    border: 0;
+    border-top: 2px dashed #f0e68c;
+}
+
+/* -------------------- */
+/* カラーバリエーション */
+/* -------------------- */
+.color-variation-section {
+    padding: 40px 40px 80px;
+    text-align: center;
+    background-color: #ffffff; /* 白で清潔感を */
+}
+
+.variation-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #b8860b;
+    margin-bottom: 40px;
+}
+
+.color-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.color-item {
+    width: 200px; /* 各アイテムの幅 */
+    text-align: center;
+}
+
+.color-swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 2px solid #b8860b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.color-item:hover .color-swatch {
+    transform: scale(1.08); /* ホバーで拡大 */
+}
+
+/* スウォッチの色定義 (ブランドのクリスタル/ジェムトーンを意識) */
+.rose-quartz { background-color: #f7cac9; } /* 非常に淡いピンク */
+.amethyst { background-color: #9966cc; } /* 透明感のあるモーヴ */
+.golden-topaz { background-color: #ffc40c; } /* 輝くゴールドオレンジ */
+.clear-crystal { 
+    background-color: #ffffff; 
+    /* クリスタルのような透明感を出すためのグラデーション */
+    background-image: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.color-code {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #b8860b;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.color-name-jp {
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin: 5px 0;
+}
+
+.color-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+/* -------------------- */
+/* ヒーローギャラリーセクション (4列横並び) */
+/* -------------------- */
+.hero-product-gallery {
+    padding: 0 40px 60px; /* 適切な余白を設定 */
+    background-color: #fffaf0; /* ベースカラー (Floral White) */
+}
+
+.gallery-grid-4col {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    flex: 1; /* 均等な幅を確保 */
+    min-width: 0; /* フレックスアイテムの最小幅を設定 */
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    /* 画像を正方形に統一したい場合は以下を追加 */
+    /* aspect-ratio: 1/1; 
+    object-fit: cover; */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 控えめな影 */
+    transition: transform 0.3s;
+}
+
+.gallery-image1{
+    width: 70%;
+    height: auto;
+    /* 画像を正方形に統一したい場合は以下を追加 */
+    /* aspect-ratio: 1/1; 
+    object-fit: cover; */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 控えめな影 */
+    transition: transform 0.3s;
+}
+
+.gallery-image1:hover{
+    transform: scale(1.02);
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+.gallery-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #b8860b; /* ダークゴールド */
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.secondary-gallery {
+    /* ギャラリー1とは背景色を変えてメリハリをつける */
+    background-color: #ffffff; /* 白い背景 */
+    padding: 60px 40px; 
+    text-align: center;
+}
+
+/* ギャラリーの画像・グリッド設定はhero-product-galleryのスタイルをそのまま使用 */
+
+.gallery-caption {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-top: 30px;
+    /* font-style: italic; */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .product-detail-section {
+        flex-direction: column;
+        margin: 40px auto;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .product-main-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-title-product {
+        font-size: 36px;
+    }
+
+    .color-grid {
+        gap: 20px;
+    }
+
+    .color-item {
+        width: 45%; /* スマホで2列表示 */
+    }
+    .hero-product-gallery {
+        padding: 0 20px 40px;
+    }
+    
+    .gallery-grid-4col {
+        /* 2列表示にするために折り返しを許可 */
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+
+    .gallery-item {
+        /* スマホサイズで2列にする */
+        width: calc(50% - 10px); /* 50%からギャップの半分を引く */
+        max-width: none;
+        flex: none; /* flex: 1 を上書き */
+    }
+
+    .gallery-name {
+        font-size: 14px;
+    }
+
+    .secondary-gallery {
+        padding: 40px 20px;
+    }
+}
+
+/* ==================== */
+/* レスポンシブ対応 (スマートフォンサイズ) */
+/* ==================== */
+@media (max-width: 768px) {
+    /* ... (中略：ハンバーガーメニュー、スマホナビは色変更のみ反映) ... */
+    
+    .hamburger-menu span {
+        background-color: #b8860b; /* アイコンの色をゴールドに */
+    }
+
+    /* スマホ用ナビゲーション（開いたとき） */
+    .nav-sp {
+        /* 背景色を半透明の淡いピンクに */
+        background-color: rgba(255, 240, 245, 0.95); /* Lavender Blush */
+        padding-top: 80px;
+    }
+
+    .nav-sp li a {
+        display: block;
+        padding: 20px 0;
+        font-size: 20px;
+        color: #444;
+        border-bottom: 1px solid #fce4ec; /* 薄いピンクの区切り線 */
+    }
+    
+    .news-date {
+        margin-bottom: 5px;
+        color: #b8860b;
+    }
+    
+    .slide-text {
+        font-size: 38px;
+        text-shadow: 1px 1px 3px rgba(184, 134, 11, 0.6);
+    }
+}
